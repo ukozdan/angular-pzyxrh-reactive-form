@@ -197,6 +197,17 @@ to {transform: scale(1);}
   appearance: none;
 }
 
+// BS4 outline button
+
+.btn-outline-caie {
+  border: 2px solid #31bae3;
+  color: #31bae3;
+  &:hover {
+    border-color: #31bae3;
+    background-color: #31bae3;
+  }
+}
+
 // BS4 checkbox
 
 $font-size-base: 1rem;
