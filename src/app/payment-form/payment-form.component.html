@@ -1,0 +1,156 @@
+<form [formGroup]="paymentForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+    <h2 class="h3">Invoice Payment Form</h2>
+    <div class="form-text">
+        <p>Intro.</p>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-xs-12 col-md-6">
+            <label for="fullName">Your Name<abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+            <input type="text" id="fullName" name="fullName" class="form-control" formControlName="fullName" autocomplete="off" autofocus="true" [ngClass]="{ 'is-invalid': submitted && f.fullName.errors, 'is-valid': f.fullName.valid, '': f.fullName.untouched }">
+            <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
+              <div *ngIf="f.fullName.errors.required">Please enter your name.</div>
+              <div *ngIf="f.fullName.errors.maxlength">Your name must be no longer than 60 characters.</div>
+              <div *ngIf="f.fullName.errors.pattern">Your name must not contain any numbers or special characters (e.g. @ # $).</div>
+            </div>
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+            <label for="centreEmailAddress">Centre email address<abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+            <input type="email" id="centreEmailAddress" name="centreEmailAddress" class="form-control" formControlName="centreEmailAddress" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.centreEmailAddress.errors, 'is-valid': f.centreEmailAddress.valid, '': f.centreEmailAddress.untouched }">
+            <div *ngIf="submitted && f.centreEmailAddress.errors" class="invalid-feedback">
+              <div *ngIf="f.centreEmailAddress.errors.required">Please enter your centre email address.</div>
+              <div *ngIf="f.centreEmailAddress.errors.maxlength">Your center email address must be no longer than 100 characters.</div>
+              <div *ngIf="f.centreEmailAddress.errors.pattern">Please enter a valid email address.</div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+            <label for="centreTelephoneNumber">Centre telephone number<abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+            <input type="tel" id="centreTelephoneNumber" class="form-control" formControlName="centreTelephoneNumber" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.centreTelephoneNumber.errors, 'is-valid': f.centreTelephoneNumber.valid, '': f.centreTelephoneNumber.untouched }">
+            <div *ngIf="submitted && f.centreTelephoneNumber.errors" class="invalid-feedback">
+              <div *ngIf="f.centreTelephoneNumber.errors.required">Please enter your centre telephone number.</div>
+              <div *ngIf="f.centreTelephoneNumber.errors.maxlength">Your centre telephone number must be no longer than 20 characters.</div>
+              <div *ngIf="f.centreTelephoneNumber.errors.pattern">Your centre telephone number must not contain any numbers or special characters (e.g. @ # $).</div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+            <label for="centreNumber">Centre number<abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+            <input name="centreNumber" id="centreNumber" class="form-control" type="text" formControlName="centreNumber" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.centreNumber.errors, 'is-valid': f.centreNumber.valid, '': f.centreNumber.untouched }">
+            <div *ngIf="submitted && f.centreNumber.errors" class="invalid-feedback">
+              <div *ngIf="f.centreNumber.errors.required">Please enter your centre number.</div>
+              <div *ngIf="f.centreNumber.errors.maxlength">Your centre number must be no longer than 20 characters.</div>
+              <div *ngIf="f.centreNumber.errors.pattern">Your centre number must not contain any numbers or special characters (e.g. @ # $).</div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+            <label for="centreName">Centre name<abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+            <input name="centreName" id="centreName" class="form-control" type="text" formControlName="centreName" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.centreName.errors, 'is-valid': f.centreName.valid, '': f.centreName.untouched }">
+            <div *ngIf="submitted && f.centreName.errors" class="invalid-feedback">
+              <div *ngIf="f.centreName.errors.required">Please enter your centre name.</div>
+              <div *ngIf="f.centreName.errors.maxlength">Your centre name must be no longer than 20 characters.</div>
+              <div *ngIf="f.centreName.errors.pattern">Your centre name must not contain any numbers or special characters (e.g. @ # $).</div>
+          </div>
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+          <label for="invoiceReference">Invoice reference<abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+          <!--
+          <div class="row no-gutters input-group">
+            <div class="col-xs-12 col-sm-1">
+              <button type="button" class="btn btn-secondary w-100 rounded-right-0" (click)="addInput()" title="Add another invoice.">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            <div formArrayName="controllerArray" class="col-xs-12 col-sm-11">
+              <div *ngFor="let item of paymentForm.controls.controllerArray.controls; let i = index" [formGroupName]="i"
+                class="input-group input-group-append row no-gutters">
+                <div class="col-xs-12 col-sm-11 mb-2">
+                  <input formControlName="invoiceReference" id="" class="form-control rounded-left-0 rounded-right-0" placeholder="Invoice {{i+1}}" [ngClass]="{ 'is-invalid': submitted && f.invoiceReference.errors }">
+                  <div *ngIf="submitted && f.invoiceReference.errors" class="invalid-feedback">
+                    <div *ngIf="f.invoiceReference.errors.required">Please enter your invoice reference.</div>
+                    <div *ngIf="f.invoiceReference.errors.maxlength">Your invoice reference must be no longer than 9 characters.</div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-1">
+                  <button type="button" class="btn btn-danger w-100 rounded-left-0" (click)="removeInput(i)" title="Delete this invoice.">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          -->
+          
+          <input type="text" id="invoiceReference" class="form-control" formControlName="invoiceReference" [ngClass]="{ 'is-invalid': submitted && f.invoiceReference.errors, 'is-valid': f.invoiceReference.valid, '': f.invoiceReference.untouched }">
+          <div *ngIf="submitted && f.invoiceReference.errors" class="invalid-feedback">
+            <div *ngIf="f.invoiceReference.errors.required">Please enter your invoice reference.</div>
+            <div *ngIf="f.invoiceReference.errors.maxlength">Your invoice reference must be no longer than 9 characters.</div>
+          </div>
+          
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+            <div class="row no-gutters input-group">
+                <div class="col-xs-12 col-sm-3 mb-3 mb-sm-0">
+                    <label for="currency" class="d-block text-truncate">Currency<abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+                    <select name="currency" id="currency" class="custom-select rounded-right-0" formControlName="currency" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.currency.errors, 'is-valid': f.currency.valid, '': f.currency.untouched }">
+                        <option value="" selected>Please select</option>
+                        <option value="GBP" title="GBP">&#163;</option>
+                        <option value="USD" title="USD">&#x24;</option>
+                        <option value="EUR" title="EUR">&#x20ac;</option>
+                    </select>
+                    <div *ngIf="submitted && f.currency.errors" class="invalid-feedback">
+                      <div *ngIf="f.currency.errors.required">Please select your currency.</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                    <label for="amount">Amount<abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+                    <input name="amount" id="amount" class="form-control rounded-left-0 input-group-append" type="text" formControlName="amount" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.amount.errors, 'is-valid': f.amount.valid, '': f.amount.untouched }">
+                    <div *ngIf="submitted && f.amount.errors" class="invalid-feedback">
+                      <div *ngIf="f.amount.errors.required">Please enter your amount.</div>
+                      <div *ngIf="f.amount.errors.maxlength">Your amount must be no larger than ...?</div>
+                      <div *ngIf="f.amount.errors.pattern">Your amount must not contain any numbers or special characters (e.g. @ # $).</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-xs-12 col-md-6">
+            <label for="cardtype">Card type<abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+            <select name="cardtype" id="cardtype" class="custom-select" formControlName="cardtype" autocomplete="off" aria-describedby="cardTypeHelpBlock" [ngClass]="{ 'is-invalid': submitted && f.cardtype.errors, 'is-valid': f.cardtype.valid, '': f.cardtype.untouched }">
+                <option value="" selected>Please select</option>
+                <option value="Debit card">Debit card</option>
+                <option value="Credit card">Credit card</option>
+            </select>
+            <small id="cardTypeHelpBlock" class="form-text text-muted">
+  A 2% surcharge will be added for credit cards.</small>
+            <div *ngIf="submitted && f.cardtype.errors" class="invalid-feedback">
+              <div *ngIf="f.cardtype.errors.required">Please select your card type.</div>
+            </div>
+        </div>
+        <div class="form-group col-12">
+            <label for="comments" class="">Comments</label>
+            <textarea name="comments" id="comments" class="form-control" formControlName="comments" rows="3" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && f.comments.errors, 'is-valid': f.comments.valid, '': f.comments.untouched }"></textarea>
+            <div *ngIf="submitted && f.comments.errors" class="invalid-feedback">
+              <div *ngIf="f.comments.errors.required">Please enter your comments.</div>
+              <div *ngIf="f.comments.errors.maxlength">Your comments must be no longer than ? characters.</div>
+              <div *ngIf="f.comments.errors.pattern">Your comments must not contain any numbers or special characters (e.g. @ # $).</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <ul id="declarationText" class="small form-text text-muted pl-3">
+              <li>Visa Credit Card and MasterCard Credit Card are subject to an additional 2% charge.</li>
+              <li>Debit cards are not subject to any charges.</li>
+              <li>Non UK Cardholders may be subject to a cross border charge from their Card Issuer.</li>
+            </ul>
+        </div>
+        <div class="form-group col-12 mt-2 mb-4">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="declaration" name="declaration" formControlName="declaration" value="true" [ngClass]="{ 'is-invalid': submitted && f.declaration.errors, 'is-valid': f.declaration.valid, '': f.declaration.untouched }">
+                <label class="custom-control-label" for="declaration"><span class="d-inline-block align-middle">I consent to the payment</span><abbr title="This field is mandatory." class="font-weight-bold text-danger">*</abbr></label>
+                <div *ngIf="submitted && f.declaration.errors" class="invalid-feedback">
+                  <div *ngIf="f.declaration.errors.required">Please select the declaration checkbox.</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-12">
+            <button class="btn btn-dark btn-lg">Submit invoice</button>
+            <button class="btn btn-outline-secondary btn-lg ml-2" type="reset" (click)="onReset()">Cancel</button>
+        </div>
+    </div>
+</form>

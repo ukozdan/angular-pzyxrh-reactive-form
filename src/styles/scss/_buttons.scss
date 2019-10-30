@@ -1,0 +1,19 @@
+/*.btn-primary {
+  background: linear-gradient(to right, $primary, $primary-accent);
+  color: $white;
+  box-shadow: $box-shadow-sm;
+
+  &:hover {
+    color: $white;
+    border-color: $primary-accent;    
+  }
+
+  &:active:not(:disabled):not(.disabled) {
+    background-color: $primary-accent;
+    border-color: $primary-accent;
+  }
+}
+
+.btn-secondary {
+  box-shadow: $box-shadow-sm;
+}*/

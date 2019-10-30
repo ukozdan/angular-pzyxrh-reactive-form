@@ -1,0 +1,39 @@
+/*.transform-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.transform-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.transform-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.transform-flip-horizontal {
+  transform: scale(-1, 1);
+}
+.transform-flip-vertical {
+  transform: scale(1, -1);
+}*/
+
+.rounded-right-0 {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.rounded-left-0 {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
