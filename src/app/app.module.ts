@@ -17,6 +17,7 @@ import { ProfileEditorComponent } from "./profile-editor/profile-editor.componen
 import { PaymentFormComponent } from "./payment-form/payment-form.component";
 import { HomeComponent } from "./home/home.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AppRoutingModule } from "./app-routing.module";
     NameEditorComponent,
     ProfileEditorComponent,
     PaymentFormComponent,
-    HomeComponent
+    HomeComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
