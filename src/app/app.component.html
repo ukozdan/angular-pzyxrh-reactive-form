@@ -3,8 +3,58 @@
 		<!-- was fixed-top -->
 		<div class="shadow-sm">
 			<nav class="quick-nav navbar navbar-expand-lg navbar-dark bg-ca-black bg-dark">
-				<div class="container pt-4"></div>
-			</nav>
+			<div class="container">
+				<button
+              class="navbar-toggler"
+              type="button"
+              aria-controls="navbarSupportedContent"
+              [attr.aria-expanded]="!collapsed"
+              aria-label="Toggle navigation"
+              (click)="collapsed = !collapsed"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+				<div class="navbar-collapse" [class.collapse]="!collapsed" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item dropdown" ngbDropdown>
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+								ngbDropdownToggle routerLink="">Nav item</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" ngbDropdownMenu>
+								<a ngbDropdownItem href="tel:+441223553543" routerLink="">
+									<span class="mr-1">+440000000000</span>
+                  <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+								</a>
+								<a ngbDropdownItem href="mailto:person@place.com" routerLink="">
+									<span class="mr-1">person@place.com</span>
+                  <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown" ngbDropdown>
+							<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle routerLink="">
+                <span class="d-inline-block mr-1">Username</span>
+                <fa-icon [icon]="['fas', 'user']"></fa-icon>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2" ngbDropdownMenu>
+								<a class="dropdown-item" href="" ngbDropdownItem routerLink="">
+
+									<span class="mr-1">Profile</span>
+                  <fa-icon [icon]="['fas', 'address-card']"></fa-icon>
+								</a>
+								<a class="dropdown-item" href="" ngbDropdownItem routerLink="">
+									<span class="mr-1">Log out</span>
+                  <fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 			<div class="branding py-4 bg-white">
 				<div class="container">
 					<div class="row">
