@@ -9,13 +9,13 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-6 d-flex align-items-center">
-              <!--<img src="./assets/img/caie-logo.svg" width="275" height="44" class="img-fluid">-->
-              <img src="https://via.placeholder.com/275x44.png" width="275" height="44" class="img-fluid">
+							<!--<img src="./assets/img/caie-logo.svg" width="275" height="44" class="img-fluid">-->
+							<img src="https://via.placeholder.com/275x44.png" width="275" height="44" class="img-fluid">
 						</div>
 							<div class="col-6 d-flex justify-content-end align-self-center">
 								<div class="d-flex align-items-center justify-content-end">
 									<!--<img src="./assets/img/ca-logo.svg" class="main-logo img-fluid" width="220" height="60"/>-->
-                  <img src="https://via.placeholder.com/220x60.png" width="220" height="60" class="img-fluid">
+									<img src="https://via.placeholder.com/220x60.png" width="220" height="60" class="img-fluid">
 								</div>
 								</div>
 							</div>
@@ -41,8 +41,67 @@
 									<li class="nav-item" routerLinkActive="active">
 										<a class="nav-link pb-2" routerLink="/payment">Payment</a>
 									</li>
-                  <li class="nav-item" routerLinkActive="active">
+									<li class="nav-item" routerLinkActive="active">
 										<a class="nav-link pb-2" routerLink="/help">Help</a>
+									</li>
+									<li class="nav-item dropdown megamenu position-static" ngbDropdown>
+										<a id="megamenu1" href="" data-toggle="dropdown" aria-haspopup="true"
+											aria-expanded="false" class="nav-link dropdown-toggle pb-2 font-weight-bold"
+											ngbDropdownToggle>Incident</a>
+										<div aria-labelledby="megamenu1"
+											class="dropdown-menu w-100 bg-transparent border-0 p-0 m-0" ngbDropdownMenu>
+											<div class="container">
+												<div class="card border-0 shadow">
+													<div class="card-header border-bottom-0">
+														<h5 class="font-weight-bold">Incident</h5>
+													</div>
+													<div class="card-body">
+														<div class="row">
+															<div class="col-lg-6 mb-4">
+																<ul class="list-unstyled">
+																	<li class="nav-item"><a href=""
+																			class="nav-link text-small pb-0"
+																			routerLink="" ngbDropdownItem>Nav link
+																			text</a></li>
+																	<li class="nav-item"><a href=""
+																			class="nav-link text-small pb-0"
+																			routerLink="" ngbDropdownItem>Nav link
+																			text</a></li>
+																	<li class="nav-item"><a href=""
+																			class="nav-link text-small pb-0"
+																			routerLink="" ngbDropdownItem>Nav link
+																			text</a></li>
+																	<li class="nav-item"><a href=""
+																			class="nav-link text-small pb-0"
+																			routerLink="" ngbDropdownItem>Nav link
+																			text</a></li>
+																</ul>
+															</div>
+															<div class="col-lg-6 mb-4">
+																<ul class="list-unstyled">
+																	<li class="nav-item"><a href=""
+																			class="nav-link text-small pb-0"
+																			routerLink="" ngbDropdownItem>Nav link
+																			text</a></li>
+																	<li class="nav-item"><a href=""
+																			class="nav-link text-small pb-0"
+																			routerLink="" ngbDropdownItem>Nav link
+																			text</a></li>
+																	<li class="nav-item"><a href=""
+																			class="nav-link text-small pb-0"
+																			routerLink="" ngbDropdownItem>Nav link
+																			text</a></li>
+																	<li class="nav-item"><a href=""
+																			class="nav-link text-small pb-0"
+																			routerLink="" ngbDropdownItem>Nav link
+																			text</a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</li>
 								</ul>
 							</div>
@@ -54,7 +113,7 @@
 						<div class="container">
 							<ol class="breadcrumb small bg-transparent px-2 mb-0">
 								<ng-template ngFor let-route [ngForOf]="parent.breadcrumbs">
-                  <fa-icon [icon]="['fas', 'home']" class="mr-1"></fa-icon>
+									<fa-icon [icon]="['fas', 'home']" class="mr-1"></fa-icon>
 									<li *ngIf="!route.terminal" class="breadcrumb-item">
 										<a href="" [routerLink]="[route.url]">
 											<fa-icon [icon]="['fas', 'home']" class="mr-1"></fa-icon>
