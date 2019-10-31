@@ -112,6 +112,8 @@ body {
   }
 }
 
+.line-height-1 {line-height: 1rem;}
+
 // Backgrounds
 
 .bg-ca-orange {background-color: $ca-orange !important;}
@@ -161,7 +163,7 @@ body {
 
 // scrolling
 
-.fixed-top {
+/*.fixed-top {
     * {transition: all ease-in-out .3s;}
     &.shrink {
         .quick-nav {
@@ -182,7 +184,7 @@ body {
             }
         }
     }
-}
+}*/
 
 // Animations
 
@@ -194,14 +196,14 @@ to {transform: scale(1.1);}
 0% {transform: scale(1.1);}
 to {transform: scale(1);}
 }*/
-.scaleUp {
+/*.scaleUp {
     transition: all .4s ease-in-out;
     //animation-name: scaleDown;
     &:hover {
         transform: scale(1.1);
         //animation-name: scaleUp;
     }
-}
+}*/
 
 // icons
 
