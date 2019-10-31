@@ -38,29 +38,23 @@
 									<li class="nav-item" routerLinkActive="active">
 										<a class="nav-link pb-2" routerLink="/home">Home</a>
 									</li>
-									<li class="nav-item" routerLinkActive="active">
-										<a class="nav-link pb-2" routerLink="/payment">Payment</a>
-									</li>
-									<li class="nav-item" routerLinkActive="active">
-										<a class="nav-link pb-2" routerLink="/help">Help</a>
-									</li>
 									<li class="nav-item dropdown megamenu position-static" ngbDropdown>
 										<a id="megamenu1" routerLink="" data-toggle="dropdown" aria-haspopup="true"
-											aria-expanded="false" class="nav-link dropdown-toggle pb-2 font-weight-bold"
-											ngbDropdownToggle>Incident</a>
+											aria-expanded="false" class="nav-link dropdown-toggle pb-2"
+											ngbDropdownToggle>Payment</a>
 										<div aria-labelledby="megamenu1"
 											class="dropdown-menu w-100 bg-transparent border-0 p-0 m-0" ngbDropdownMenu>
 											<div class="container">
 												<div class="card border-0 shadow">
 													<div class="card-header border-bottom-0">
-														<h5 class="font-weight-bold">Incident</h5>
+														<h5 class="font-weight-bold">Payment</h5>
 													</div>
 													<div class="card-body">
 														<div class="row">
 															<div class="col-lg-6 mb-4">
 																<ul class="list-unstyled">
 																	<li class="nav-item"><a class="nav-link text-small pb-0"
-																			routerLink="" ngbDropdownItem>Nav link
+																			routerLink="/payment" ngbDropdownItem>Invoice
 																			text</a></li>
 																	<li class="nav-item"><a class="nav-link text-small pb-0"
 																			routerLink="" ngbDropdownItem>Nav link
@@ -94,6 +88,9 @@
 												</div>
 											</div>
 										</div>
+									</li>
+									<li class="nav-item" routerLinkActive="active">
+										<a class="nav-link pb-2" routerLink="/help">Help</a>
 									</li>
 								</ul>
 							</div>
