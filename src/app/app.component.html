@@ -17,9 +17,9 @@
 				<div class="navbar-collapse" [class.collapse]="!collapsed" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item dropdown" ngbDropdown>
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+							<a class="nav-link dropdown-toggle d-after-none" href="#" id="navbarDropdownMenuLink" role="button"
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-								ngbDropdownToggle routerLink="">Nav item</a>
+								ngbDropdownToggle routerLink="">Nav item <fa-icon [icon]="['fas', 'angle-down']" class="ml-1 text-caie-blue"></fa-icon></a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" ngbDropdownMenu>
 								<a ngbDropdownItem href="tel:+441223553543" routerLink="">
 									<span class="mr-1">+440000000000</span>
@@ -34,10 +34,11 @@
 					</ul>
 					<ul class="navbar-nav">
 						<li class="nav-item dropdown" ngbDropdown>
-							<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2" role="button"
+							<a class="nav-link dropdown-toggle d-after-none" href="" id="navbarDropdownMenuLink2" role="button"
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle routerLink="">
                 <span class="d-inline-block mr-1">Username</span>
                 <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                <fa-icon [icon]="['fas', 'angle-down']" class="ml-1 text-caie-blue"></fa-icon>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2" ngbDropdownMenu>
 								<a class="dropdown-item" href="" ngbDropdownItem routerLink="">
