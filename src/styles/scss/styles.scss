@@ -95,6 +95,14 @@ body {
     font-size: 7vw;
 }
 
+// BS4 utilities
+
+.d-after-none {
+  &::after {
+    display: none;
+  }
+}
+
 // Backgrounds
 
 .bg-ca-orange {background-color: $ca-orange !important;}
@@ -108,6 +116,9 @@ body {
 
 .bg-ca-black {background-color: $ca-black !important;}
 
+.text-caie-blue {
+  color: #31bae3 !important;
+}
 .bg-caie-grey {background-color: #f4f4f4 !important;}
 .bg-caie-grey2 {background-color: #f9f9f9 !important;}
 
