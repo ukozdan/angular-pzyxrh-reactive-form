@@ -75,6 +75,15 @@ $ca-blue: #37c6f7;
 $ca-green: #1cd165;
 $ca-black: #333333;
 
+$caie-corporate-blue: #41B6E6;
+$caie-corporate-yellow: #fcc652;
+$caie-corporate-grey: #575756;
+$caie-primary-blue: #117cc0;
+$caie-lower-secondary-green: #6cb42c;
+$caie-upper-secondary-orange: #ea5a0b;
+$caie-advanced-red: #e11950;
+$caie-professional-development-mauve: #8c1d81;
+
 // 
 
 html {height: 100%;}
@@ -117,7 +126,7 @@ body {
 .bg-ca-black {background-color: $ca-black !important;}
 
 .text-caie-blue {
-  color: #31bae3 !important;
+  color: $caie-corporate-blue !important;
 }
 .bg-caie-grey {background-color: #f4f4f4 !important;}
 .bg-caie-grey2 {background-color: #f9f9f9 !important;}
@@ -136,7 +145,7 @@ body {
             &.active {
                 > .nav-link {
                     padding-bottom: 0;
-                    border-bottom: .375em solid #31bae3;
+                    border-bottom: .375em solid $caie-corporate-blue;
                 }
             }
             > .nav-link {
